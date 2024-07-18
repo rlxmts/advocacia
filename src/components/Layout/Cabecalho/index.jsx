@@ -1,0 +1,36 @@
+import styled from "styled-components";
+import Menu from "../../Section/Menu";
+import Botao from "../../commom/Botao";
+import Logo from "../../commom/Logo";
+
+const Header = styled.header`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1280px;
+    border-bottom: 1px solid #ffffff24;
+`
+const ContainerNav = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+const Cabecalho = ()=> {
+    return(
+            <Header>
+                    <Logo />
+                    <ContainerNav>
+                        <Menu />
+                        <Botao href='https://wa.me/5521991537608'> WhatsApp </Botao>
+                    </ContainerNav>
+            </Header>
+    )
+}
+
+export default Cabecalho;
