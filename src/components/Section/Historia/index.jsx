@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { Container } from "../../commom/Container";
 import { Paragrafo } from "../../commom/Paragrafo";
 import { Subtitulo } from "../../commom/Subtitulo";
+import { TituloMaior } from "../../commom/TituloMaior";
 
 const ElementHistoria = styled.div`
     
     .Sobre-container{
         display: flex;
-        align-items: center;
         padding: 10rem 2rem;
         gap: 2rem;
     }
@@ -20,14 +20,21 @@ const CaixaParagrafos = styled.div`
     gap: 1.6rem;
 `
 
+const CaixaTitulos = styled.div`
+    display:  flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 50%;
+`
+
 const Historia = () => {
     return(
-        <ElementHistoria>
+        <ElementHistoria  id="sobre">
             <Container className="Sobre-container">
-                <div>
+                <CaixaTitulos>
                     <Subtitulo>Sobre Nós</Subtitulo>
-                    <h3>Melo Vianna: jurídico moderno, descomplicado, transparente e com foco em resultados</h3>
-                </div>
+                    <TituloMaior>Horbiti: jurídico moderno, descomplicado, transparente e com foco em resultados</TituloMaior>
+                </CaixaTitulos>
                 <CaixaParagrafos>
                     <Paragrafo>
                         A crença do Melo Vianna Advogados é desenvolver soluções jurídicas adequadas, inovadoras e que contribuam com a evolução dos negócios dos clientes.

@@ -13,7 +13,7 @@ const SecaoBanner = styled.section`
 
 const Banner = () => {
     return(
-        <SecaoBanner>
+        <SecaoBanner id="inicio">
             <Titulo>Do ponto de vista jurídico e pela ótica econômica, <br></br>
             entendemos o seu negócio e as suas<br></br>
             particularidades.

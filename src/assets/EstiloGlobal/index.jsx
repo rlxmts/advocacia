@@ -43,4 +43,8 @@ export const EstiloGlobal = createGlobalStyle`
         font-style: none;
         text-decoration: none;
     }
+
+    html{
+        scroll-behavior: smooth;
+    }
 `
