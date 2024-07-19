@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 const BotaoEstilizado = styled.a`
     padding: .5rem 1rem;
-    border-radius: 5px;
     font-family: "RobotoMedium";
     cursor: pointer;
     display: block;
     width: 100%;
     max-width: 200px;
     text-align: center;
+    transition: .6s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 `
 
 const Botao = ({ children, branco=true, href })=> {
