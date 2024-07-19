@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const Div = styled.div`
     width: 100%;
-    max-width: 150px;
-
+    min-width: 120px;
     img{
         width: 100%;
+        max-width: 150px;
     }
 `
 

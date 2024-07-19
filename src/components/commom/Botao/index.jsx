@@ -15,12 +15,13 @@ const BotaoEstilizado = styled.a`
     }
 `
 
-const Botao = ({ children, branco=true, href })=> {
+const Botao = ({ children, branco=true, href, classe })=> {
 
     const corLink = branco ? "#FFFFFF" : "#000000";
     
     return(
         <BotaoEstilizado 
+            className={classe}
             href={href} 
             style={ { color: corLink, border:`1px solid ${corLink}` } }
             target="_blank"

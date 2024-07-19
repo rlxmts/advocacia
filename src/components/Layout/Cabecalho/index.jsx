@@ -15,6 +15,17 @@ const Header = styled.header`
     transform: translateX(-50%);
     max-width: 1280px;
     border-bottom: 1px solid #ffffff24;
+    z-index: 99999;
+    transition: .7s;
+    
+    @media screen and (max-width: 768px){
+        height: 70px;
+        padding: 0 1rem;
+
+        .cabecalho-wpp{
+            display: none;
+        }
+    }
 `
 const ContainerNav = styled.div`
     display: flex;
@@ -27,7 +38,7 @@ const Cabecalho = ()=> {
                     <Logo />
                     <ContainerNav>
                         <Menu />
-                        <Botao href='https://wa.me/5521991537608'> WhatsApp </Botao>
+                        <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
                     </ContainerNav>
             </Header>
     )

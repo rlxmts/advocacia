@@ -51,7 +51,7 @@ const Contato = ()=>{
                 <div className="contato-textos">
                     <Subtitulo>Contato</Subtitulo>
                     <TituloMaior>Deseja ser atendido por nós?</TituloMaior>
-                    <Paragrafo>Carla Melo Vianna e seus advogados associados colocam sua expertise à disposição da sua empresa. Entre em contato.</Paragrafo>
+                    <Paragrafo>A Horbiti e seus advogados associados colocam sua expertise à disposição da sua empresa. Entre em contato.</Paragrafo>
                 </div>
                 <Formulario />
                 <Informacoes>

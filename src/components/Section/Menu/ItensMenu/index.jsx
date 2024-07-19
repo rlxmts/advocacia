@@ -18,6 +18,13 @@ const Item = styled.li`
             opacity: .7;
         }
     }
+
+    @media screen and (max-width: 768px){
+        a{
+            font-size: 1.7rem;
+            letter-spacing: 2px;
+        }
+    }
 `
 const linksMenu = [
     {
