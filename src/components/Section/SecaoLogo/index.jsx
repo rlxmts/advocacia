@@ -32,7 +32,7 @@ const FundoLogo = styled.div`
         padding: 2rem;
 
         img{
-            max-width: 100%;
+            max-width: 150px;
         }
     }
 `

@@ -35,6 +35,11 @@ const Informacoes = styled.div`
         font-size: 14px;
         letter-spacing: 1px;
         color: #777777;
+        margin-top: 1rem;
+    }
+
+    span, p {
+        text-align: start;
     }
     
 `

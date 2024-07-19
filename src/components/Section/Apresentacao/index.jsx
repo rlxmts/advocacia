@@ -39,6 +39,12 @@ const ApresentacaoElement = styled.div`
     a{
         padding: 1rem;
     }
+
+    @media screen and (max-width: 768px){
+        p{
+            font-size: 1.5rem;
+        }
+    }
 `
 
 const Apresentacao = () => {

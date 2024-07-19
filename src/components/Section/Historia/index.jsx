@@ -11,6 +11,16 @@ const ElementHistoria = styled.div`
         padding: 10rem 2rem;
         gap: 2rem;
     }
+
+    @media screen and (max-width: 768px){
+        .Sobre-container{
+            flex-direction: column;
+
+            h4{
+                width: 100%;
+            }
+        }
+    }
 `
 
 const CaixaParagrafos = styled.div`
@@ -25,6 +35,10 @@ const CaixaTitulos = styled.div`
     flex-direction: column;
     gap: 1.6rem;
     width: 50%;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 `
 
 const Historia = () => {
@@ -48,7 +62,6 @@ const Historia = () => {
                     <Paragrafo>
                         Melo Vianna também é especializado em assessoria a multinacionais nos trâmites para abertura de filiais brasileiras em todo o território nacional.
                     </Paragrafo>
-
                 </CaixaParagrafos>
             </Container>
         </ElementHistoria>
