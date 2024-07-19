@@ -26,6 +26,15 @@ const FundoLogo = styled.div`
         position: relative;
         z-index: 1;
     }
+
+    @media screen and (max-width: 768px){
+
+        padding: 2rem;
+
+        img{
+            max-width: 100%;
+        }
+    }
 `
 
 const SecaoLogo = () => {

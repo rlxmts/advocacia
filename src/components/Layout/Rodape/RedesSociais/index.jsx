@@ -5,6 +5,7 @@ const ListaRedes = styled.ul`
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    min-width: 250px;
 
 `
 

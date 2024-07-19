@@ -8,4 +8,8 @@ export const Titulo = styled.h2`
     max-width: 900px;
     text-align: end;
     font-weight: 300;
+
+    @media screen and (max-width:768px){
+        font-size: 2rem;
+    }
 `

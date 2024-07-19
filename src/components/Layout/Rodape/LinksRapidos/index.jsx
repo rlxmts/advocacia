@@ -5,6 +5,7 @@ const ListaDeLinks = styled.ul`
     display: flex;
     flex-direction: column;
     gap: .5em;
+    min-width: 250px;
 
     li a {
         font-size: 13px;

@@ -24,6 +24,12 @@ const Form = styled.form`
             width: 100%;
             outline: none;
         }
+
+        @media screen and (max-width: 768px){
+            a{
+                max-width: 100%;
+            }
+        }
 `
 
 const Formulario = () => {

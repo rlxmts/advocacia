@@ -8,4 +8,8 @@ export const TituloMaior = styled.h4`
     max-width: 600px;
     text-align: start;
     font-weight: 300;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
 `
