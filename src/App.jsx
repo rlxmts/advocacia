@@ -1,8 +1,9 @@
 import Cabecalho from "./components/Layout/Cabecalho"
-import Segmentos from "./components/Layout/Segmentos"
-import Sobre from "./components/Layout/Sobre"
+import Segmentos from "./components/Section/Segmentos"
+import Sobre from "./components/Section/Sobre"
 import Banner from "./components/Section/Banner"
 import SecaoLogo from "./components/Section/SecaoLogo"
+import Atuacao from "./components/Section/Atuacao"
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
     <Sobre />
     <SecaoLogo />
     <Segmentos />
+    <Atuacao />
     </>
   )
 }

@@ -1,5 +1,5 @@
-import Apresentacao from "../../Section/Apresentacao"
-import Historia from "../../Section/Historia";
+import Apresentacao from "../Apresentacao"
+import Historia from "../Historia";
 
 const Sobre = () => {
     return(
