@@ -40,7 +40,6 @@ export const EstiloGlobal = createGlobalStyle`
         color: #000000;
         box-sizing: border-box;
         font-family: "Roboto";
-        font-style: none;
         text-decoration: none;
     }
 

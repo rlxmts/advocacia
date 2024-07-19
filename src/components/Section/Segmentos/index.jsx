@@ -67,7 +67,7 @@ const segmentos = [
 
 const Segmentos = () => {
     return(
-        <SectionSegmentos>
+        <SectionSegmentos id="segmentos">
             <Container>
                 <DivTextos>
                     <Paragrafo>

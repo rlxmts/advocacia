@@ -18,6 +18,11 @@ const SecaoAtuacao = styled.section`
         max-width: 300px;
     }
 
+    .atuacao-titulo{
+        text-align: center;
+        margin: 5rem 0 2rem 0;
+    }
+
     .atuacao-container{
         display: flex;
         flex-direction: column;
@@ -34,7 +39,7 @@ const SecaoAtuacao = styled.section`
 
 const Atuacao = () =>{
     return(
-        <SecaoAtuacao>
+        <SecaoAtuacao id="atuacao">
             <Container className="atuacao-container">
                 <Subtitulo>Atuação</Subtitulo>
                 <TituloMaior>Assessoria jurídica multidisciplinar</TituloMaior>
@@ -44,6 +49,7 @@ const Atuacao = () =>{
                 </div>
                 <ListaDeAreas />
             </Container>
+            <TituloMaior className="atuacao-titulo">Vamos Trabalhar Juntos?</TituloMaior>
             <Botao branco={false}> Fale com a gente</Botao>
         </SecaoAtuacao>
     )

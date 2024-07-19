@@ -4,6 +4,8 @@ import Sobre from "./components/Section/Sobre"
 import Banner from "./components/Section/Banner"
 import SecaoLogo from "./components/Section/SecaoLogo"
 import Atuacao from "./components/Section/Atuacao"
+import Contato from "./components/Section/Contato"
+import Rodape from "./components/Layout/Rodape"
 
 function App() {
   
@@ -16,6 +18,9 @@ function App() {
     <SecaoLogo />
     <Segmentos />
     <Atuacao />
+    <SecaoLogo />
+    <Contato />
+    <Rodape />
     </>
   )
 }

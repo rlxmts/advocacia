@@ -1,10 +1,13 @@
+import classNames from "classnames"
+import { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const ListaDeCards = styled.ul`
-    
+  width:100% ;
 `
 
 const ItemDeAtuacao = styled.li`
+
     h5{
         text-transform: uppercase;
         font-size: 12px;
@@ -13,18 +16,22 @@ const ItemDeAtuacao = styled.li`
         border-bottom: 1px solid #DCDCDC;
         cursor: pointer;
         position: relative;
+        width: 100%;
+        z-index: 1;
+        background-color: transparent;
     }
-
-    .item-texto{
+    
+    .item-texto {
+        height: 0;
         overflow: hidden;
-        height: 0px;
-        opacity: 0;
+        transition: .6s;
     }
 
-    p{
+    p{  
+        transition: .5s;
+        line-height: 1.2rem;
         padding: 2rem 0;
         font-size: 14px;
-        line-height: 1.2rem;
         font-family: "Lora";
     }
 `
@@ -72,16 +79,42 @@ const areasDeAtuacao = [
     }
 ]
 
+
 const ListaDeAreas = () =>{
+
+    const [ativo, setAtivo] = useState(null)
+
+    function fechaLeitura(){
+        const divParagrafo = document.querySelectorAll('.item-texto');
+        divParagrafo.forEach( item => {
+            item.style.height = '0';
+        })
+    }
+
+    function ativaLeitura(elemento){
+        const li = elemento.parentElement;
+        const divParagrafo = li.querySelector('.item-texto');
+        const alturaParagrafo = li.querySelector('p').scrollHeight;
+        
+        if(ativo === li) {
+            divParagrafo.style.height = '0';
+            setAtivo(null);
+        }else{
+            fechaLeitura();       
+            divParagrafo.style.height = `${alturaParagrafo}px`;   
+            setAtivo(li)       
+        }       
+    }
+    
 
     return(
         
         <ListaDeCards>
             {areasDeAtuacao.map( item => {
                 return(
-                    <ItemDeAtuacao key={item.nome}>
+                    <ItemDeAtuacao key={item.nome} onClick={(e) => ativaLeitura(e.target)}>
                         <h5>{item.nome}</h5>
-                        <div className="item-texto">
+                        <div  className='item-texto'>
                             <p>{item.texto}</p>                    
                         </div>
                     </ItemDeAtuacao>
