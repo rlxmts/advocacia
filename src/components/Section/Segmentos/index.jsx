@@ -21,6 +21,14 @@ const DivTextos = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+
+        h4{
+            margin-top: 2rem;
+        }
+    }
 `
 const CardsContainer = styled.div`
     display: flex;
@@ -28,6 +36,11 @@ const CardsContainer = styled.div`
     flex-wrap: wrap;
     justify-content:space-between;
     padding: 5rem 0;
+
+    @media screen and (max-width: 768px){
+        gap: 1rem;
+        justify-content: center;
+    }
 `
 
 const segmentos = [ 
@@ -71,7 +84,7 @@ const Segmentos = () => {
             <Container>
                 <DivTextos>
                     <Paragrafo>
-                    Independente do segmento, o objetivo do Melo Vianna Advogados é facilitar e potencializar os negócios e o funcionamento empresarial dos clientes, trazendo segurança aos projetos, operações e decisões em meio à instabilidade do mercado e riscos inerentes à atividade.
+                    Independente do segmento, o objetivo da Horbiti Advogados é facilitar e potencializar os negócios e o funcionamento empresarial dos clientes, trazendo segurança aos projetos, operações e decisões em meio à instabilidade do mercado e riscos inerentes à atividade.
                     </Paragrafo>
                     <div>
                         <Subtitulo>Segmentos</Subtitulo>

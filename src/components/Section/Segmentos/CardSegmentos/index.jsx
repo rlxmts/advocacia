@@ -43,6 +43,10 @@ const Card = styled.div`
     &:hover h3{
         transform: translateY(-20px);
     }
+
+    @media screen and (max-width: 768px){
+        width: 45%;
+    }
 `
 
 const CardSegmentos = ({children, imagem}) => {
