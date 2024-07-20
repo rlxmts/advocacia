@@ -45,7 +45,7 @@ const Atuacao = () =>{
                 <TituloMaior>Assessoria jurídica multidisciplinar</TituloMaior>
                 <div className="paragrafos">
                     <Paragrafo>Atendemos nossos clientes em todas as áreas do direito essenciais para o bom funcionamento da empresa: cível, contratual, trabalhista, tributário e societário.</Paragrafo>
-                    <Paragrafo>Também é possível contar com o Melo Vianna Advogados nas áreas do direito de família e sucessões, penal empresarial e previdenciário.</Paragrafo>
+                    <Paragrafo>Também é possível contar com a Horbiti Advogados nas áreas do direito de família e sucessões, penal empresarial e previdenciário.</Paragrafo>
                 </div>
                 <ListaDeAreas />
             </Container>
