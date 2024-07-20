@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Menu from "../../Section/Menu";
 import Botao from "../../commom/Botao";
 import Logo from "../../commom/Logo";
+import classNames from "classnames";
 
 const Header = styled.header`
     display: flex;
@@ -32,10 +33,11 @@ const ContainerNav = styled.div`
     align-items: center;
 `
 
-const Cabecalho = ()=> {
+const Cabecalho = ({cor, classe})=> {
+
     return(
-            <Header>
-                    <Logo />
+            <Header className={classNames(classe)}>
+                    <Logo cor={cor} />
                     <ContainerNav>
                         <Menu />
                         <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>

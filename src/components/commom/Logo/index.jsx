@@ -9,10 +9,10 @@ const Div = styled.div`
     }
 `
 
-const Logo = ()=>{
+const Logo = ( {cor} )=>{
     return(
         <Div>
-            <img src='./imagens/logo-branca.png' />
+            <img src={`./imagens/logo-${cor}.png`} />
         </Div>
     )
 }

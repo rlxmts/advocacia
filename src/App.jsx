@@ -6,13 +6,42 @@ import SecaoLogo from "./components/Section/SecaoLogo"
 import Atuacao from "./components/Section/Atuacao"
 import Contato from "./components/Section/Contato"
 import Rodape from "./components/Layout/Rodape"
+import { useEffect, useState } from "react"
+import styled from "styled-components"
+
+const ContainerApp = styled.div`
+
+  .cabecalho-ativo {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 3px #00000070;
+  }
+  
+`
 
 function App() {
+
+  const [cabecalhoAtivo, setCabecalhoAtivo] = useState('');
+  const [corLogo, setCorLogo] = useState('branca');
   
+  useEffect( ()=> {
+
+    function alterarHeader(){
+      window.scrollY > 0 ? 
+      setCabecalhoAtivo('cabecalho-ativo') & setCorLogo('preta')
+      : setCabecalhoAtivo('') & setCorLogo('branca');
+    }
+
+    window.addEventListener('scroll', alterarHeader);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, [])
 
   return (
-    <>
-    <Cabecalho />
+    <ContainerApp>
+    <Cabecalho classe={cabecalhoAtivo} cor={corLogo}/>
     <Banner />
     <Sobre />
     <SecaoLogo />
@@ -21,7 +50,7 @@ function App() {
     <SecaoLogo />
     <Contato />
     <Rodape />
-    </>
+    </ContainerApp>
   )
 }
 
