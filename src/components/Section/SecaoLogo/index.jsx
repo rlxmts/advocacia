@@ -30,6 +30,7 @@ const FundoLogo = styled.div`
     @media screen and (max-width: 768px){
 
         padding: 2rem;
+        background-position: right;
 
         img{
             max-width: 150px;
