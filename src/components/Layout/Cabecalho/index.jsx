@@ -19,10 +19,22 @@ const Header = styled.header`
     border-bottom: 1px solid #ffffff24;
     z-index: 99999;
     transition: .7s;
+
+    .cabecalho-caixa-mobile{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
     
     @media screen and (max-width: 768px){
         height: 70px;
-        padding: 0 1rem;
+        padding: 0;
+        flex-direction: column;
+
+        .cabecalho-caixa-mobile{
+          padding: .5rem;
+        }
 
         .cabecalho-wpp{
             display: none;
@@ -46,8 +58,10 @@ const Cabecalho = ({cor, classe, classeMenu})=> {
     return(
       <Header className={classNames(classe)}>
         <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
-        <Logo cor={cor} />
-        <BotaoMenu classe={classeMenu} />
+        <div className="cabecalho-caixa-mobile">
+          <Logo cor={cor} />
+          <BotaoMenu classe={classeMenu} />
+        </div>
         <ContainerNav>
             <Menu />
             <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>

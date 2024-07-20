@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Button = styled.div`
-    display: none;
+    display: none !important;
     height: 20px;
     width: 20px;
     display: flex;
@@ -36,7 +36,7 @@ const Button = styled.div`
 
 
     @media screen and (max-width: 768px){
-        display: flex;
+        display: flex !important;
     }
 `
 

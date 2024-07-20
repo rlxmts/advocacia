@@ -13,16 +13,11 @@ const Nav = styled.nav`
     @media screen and (max-width: 768px){
 
         ul{
-            position: fixed;
-            z-index: 999;
             flex-direction: column;
             background-color: #1b1d1f;
-            height: 100vh;
-            top: 70px;
-            width: 100vw;
-            left: 0;
+            height: 100vh;            
+            width: 100vw;         
             justify-content: center;
-            transform: translateY(-150%);
         }
     }
 `
