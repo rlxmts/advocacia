@@ -49,12 +49,12 @@ const linksMenu = [
     }
 ]
 
-const ItensMenu = ()=> {
+const ItensMenu = ({aoClicar})=> {
 
     return(
         linksMenu.map( item => 
             <Item key={item.link}>
-                <a href={item.link}>{item.nome}</a>
+                <a onClick={aoClicar} href={item.link}>{item.nome}</a>
             </Item>
         )  
     )

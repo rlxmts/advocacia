@@ -4,6 +4,7 @@ import Botao from "../../commom/Botao";
 import Logo from "../../commom/Logo";
 import classNames from "classnames";
 import BotaoMenu from "../../commom/BotaoMenu";
+import { useState } from "react";
 
 const Header = styled.header`
     display: flex;
@@ -19,22 +20,10 @@ const Header = styled.header`
     border-bottom: 1px solid #ffffff24;
     z-index: 99999;
     transition: .7s;
-
-    .cabecalho-caixa-mobile{
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-    }
     
     @media screen and (max-width: 768px){
         height: 70px;
-        padding: 0;
-        flex-direction: column;
-
-        .cabecalho-caixa-mobile{
-          padding: .5rem;
-        }
+        padding: 0 1rem;
 
         .cabecalho-wpp{
             display: none;
@@ -44,6 +33,10 @@ const Header = styled.header`
 const ContainerNav = styled.div`
     display: flex;
     align-items: center;
+
+    .abrir-menu-mobile{
+      height: 100vh;
+    }
 `
 
 const BotaoPular = styled.a`
@@ -55,15 +48,19 @@ const BotaoPular = styled.a`
 
 const Cabecalho = ({cor, classe, classeMenu})=> {
 
+    const [abreMenu, setAbreMenu] = useState('');
+
+    function abrirMenuMobile(){
+      abreMenu === '' ? setAbreMenu('abrir-menu-mobile') : setAbreMenu('');
+    }
+
     return(
       <Header className={classNames(classe)}>
         <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
-        <div className="cabecalho-caixa-mobile">
-          <Logo cor={cor} />
-          <BotaoMenu classe={classeMenu} />
-        </div>
+        <Logo cor={cor} />
+        <BotaoMenu classe={classeMenu} aoClicar={abrirMenuMobile} />
         <ContainerNav>
-            <Menu />
+            <Menu classe={classNames(abreMenu)} aoClicarLink={abrirMenuMobile} />
             <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
         </ContainerNav>
       </Header>

@@ -40,9 +40,10 @@ const Button = styled.div`
     }
 `
 
-const BotaoMenu = ({classe}) => {
+const BotaoMenu = ({classe, aoClicar}) => {
+
     return(
-        <Button>
+        <Button onClick={aoClicar}>
             <span className={classe}></span>
         </Button>
     )

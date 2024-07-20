@@ -8,6 +8,7 @@ import Contato from "./components/Section/Contato"
 import Rodape from "./components/Layout/Rodape"
 import { useEffect, useState } from "react"
 import styled from "styled-components"
+import classNames from "classnames"
 
 const ContainerApp = styled.div`
 
@@ -31,6 +32,7 @@ function App() {
   const [cabecalhoAtivo, setCabecalhoAtivo] = useState('');
   const [corLogo, setCorLogo] = useState('branca');
   const [corBotao, setCorBotao] = useState('');
+  const [animaBotao, setAnimaBotao] = useState('');
   
   useEffect( ()=> {
 
@@ -46,11 +48,19 @@ function App() {
       window.removeEventListener('scroll', alterarHeader);
     };
 
+
+
   }, [])
+
+  const classesBotaoMenu = classNames(corBotao, animaBotao);
 
   return (
     <ContainerApp>
-    <Cabecalho classe={cabecalhoAtivo} cor={corLogo} classeMenu={corBotao}/>
+    <Cabecalho 
+      classe={cabecalhoAtivo} 
+      cor={corLogo} 
+      classeMenu={classesBotaoMenu}
+    />
     <Banner />
     <Sobre />
     <SecaoLogo />

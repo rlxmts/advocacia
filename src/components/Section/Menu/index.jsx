@@ -14,18 +14,22 @@ const Nav = styled.nav`
 
         ul{
             flex-direction: column;
-            background-color: #1b1d1f;
-            height: 100vh;            
+            background-color: #1b1d1f;           
             width: 100vw;         
             justify-content: center;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            overflow: hidden;
+            height: 0;
         }
     }
 `
-const Menu = ()=> {
+const Menu = ({classe, aoClicarLink})=> {
     return(
         <Nav>
-            <ul>
-                <ItensMenu />
+            <ul className={classe}>
+                <ItensMenu aoClicar={aoClicarLink} />
             </ul>
         </Nav>
     )
