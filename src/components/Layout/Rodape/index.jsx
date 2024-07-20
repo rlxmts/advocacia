@@ -45,7 +45,7 @@ const Rodape = () => {
         <Footer>
             <Container>
                 <div className="caixa-logo">
-                    <Logo />
+                    <Logo cor='branca' />
                 </div>
                 <div className="caixa-listas">
                     <LinksRapidos />
