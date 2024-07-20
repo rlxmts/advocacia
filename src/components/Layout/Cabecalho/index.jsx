@@ -3,6 +3,7 @@ import Menu from "../../Section/Menu";
 import Botao from "../../commom/Botao";
 import Logo from "../../commom/Logo";
 import classNames from "classnames";
+import BotaoMenu from "../../commom/BotaoMenu";
 
 const Header = styled.header`
     display: flex;
@@ -46,6 +47,7 @@ const Cabecalho = ({cor, classe})=> {
       <Header className={classNames(classe)}>
         <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
         <Logo cor={cor} />
+        <BotaoMenu />
         <ContainerNav>
             <Menu />
             <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
