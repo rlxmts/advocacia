@@ -41,13 +41,13 @@ const BotaoPular = styled.a`
   color: transparent;
 `
 
-const Cabecalho = ({cor, classe})=> {
+const Cabecalho = ({cor, classe, classeMenu})=> {
 
     return(
       <Header className={classNames(classe)}>
         <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
         <Logo cor={cor} />
-        <BotaoMenu />
+        <BotaoMenu classe={classeMenu} />
         <ContainerNav>
             <Menu />
             <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>

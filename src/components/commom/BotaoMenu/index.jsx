@@ -13,8 +13,10 @@ const Button = styled.div`
         width: 20px;
         background-color: #FFFFFF;
         position: relative;
+        transition: .6s;
         
         &::before, &::after{
+            transition: .6s;
             content: '';
             display: block;
             height: 2px;

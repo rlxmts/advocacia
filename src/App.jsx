@@ -15,6 +15,14 @@ const ContainerApp = styled.div`
     background-color: #FFFFFF;
     box-shadow: 0px 0px 3px #00000070;
   }
+
+  .botao-menu-preto{
+    background-color: #000000;
+
+    &::after, &::before{
+      background-color: #000000;
+    }
+  }
   
 `
 
@@ -22,13 +30,14 @@ function App() {
 
   const [cabecalhoAtivo, setCabecalhoAtivo] = useState('');
   const [corLogo, setCorLogo] = useState('branca');
+  const [corBotao, setCorBotao] = useState('');
   
   useEffect( ()=> {
 
     function alterarHeader(){
       window.scrollY > 0 ? 
-      setCabecalhoAtivo('cabecalho-ativo') & setCorLogo('preta')
-      : setCabecalhoAtivo('') & setCorLogo('branca');
+      setCabecalhoAtivo('cabecalho-ativo') & setCorLogo('preta') & setCorBotao('botao-menu-preto')
+      : setCabecalhoAtivo('') & setCorLogo('branca') & setCorBotao('');
     }
 
     window.addEventListener('scroll', alterarHeader);
@@ -41,7 +50,7 @@ function App() {
 
   return (
     <ContainerApp>
-    <Cabecalho classe={cabecalhoAtivo} cor={corLogo}/>
+    <Cabecalho classe={cabecalhoAtivo} cor={corLogo} classeMenu={corBotao}/>
     <Banner />
     <Sobre />
     <SecaoLogo />
