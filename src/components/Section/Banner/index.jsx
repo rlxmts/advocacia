@@ -9,11 +9,19 @@ const SecaoBanner = styled.section`
     align-items : center ;
     justify-content:  center;
     padding: 2rem;
+
+    h1{
+        font-size: 1px;
+        position: absolute;
+        top: -9999px;
+        color: transparent;
+    }
 `
 
 const Banner = () => {
     return(
         <SecaoBanner id="inicio">
+            <h1 id="conteudo-principal">Horbiti - Advogados</h1>
             <Titulo>Do ponto de vista jurídico e pela ótica econômica, <br></br>
             entendemos o seu negócio e as suas<br></br>
             particularidades.

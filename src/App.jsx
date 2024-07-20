@@ -34,7 +34,7 @@ function App() {
     window.addEventListener('scroll', alterarHeader);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', alterarHeader);
     };
 
   }, [])

@@ -33,16 +33,24 @@ const ContainerNav = styled.div`
     align-items: center;
 `
 
+const BotaoPular = styled.a`
+  position: absolute;
+  font-size: 1px;
+  top: -1px;
+  color: transparent;
+`
+
 const Cabecalho = ({cor, classe})=> {
 
     return(
-            <Header className={classNames(classe)}>
-                    <Logo cor={cor} />
-                    <ContainerNav>
-                        <Menu />
-                        <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
-                    </ContainerNav>
-            </Header>
+      <Header className={classNames(classe)}>
+        <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
+        <Logo cor={cor} />
+        <ContainerNav>
+            <Menu />
+            <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
+        </ContainerNav>
+      </Header>
     )
 }
 
