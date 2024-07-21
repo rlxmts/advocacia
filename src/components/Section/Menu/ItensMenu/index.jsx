@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { useScrollY } from "../../../../Hooks/useScrollY";
+import { useContext } from "react";
+import { MenuMobileContext } from "../../../../context/MenuMobileContext";
 
 const Item = styled.li`
 
@@ -58,17 +60,16 @@ const linksMenu = [
     }
 ]
 
-const ItensMenu = ({aoClicar})=> {
-
+const ItensMenu = ()=> {
     const scrollDown = useScrollY();
     const menuScroll = scrollDown ? 'linkScroll' : '';
-
+    const {menuToggle} = useContext(MenuMobileContext);
     return(
         linksMenu.map( item => 
             <Item key={item.link}>
                 <a 
                     className={menuScroll}
-                    onClick={aoClicar} 
+                    onClick={menuToggle} 
                     href={item.link}
                 >
                     {item.nome}
