@@ -2,28 +2,45 @@ import styled from "styled-components";
 import Menu from "../../Section/Menu";
 import Botao from "../../commom/Botao";
 import Logo from "../../commom/Logo";
-import classNames from "classnames";
 import BotaoMenu from "../../commom/BotaoMenu";
 import { useState } from "react";
+import { useScrollY } from "../../../Hooks/useScrollY";
+import { Container } from "../../commom/Container";
 
 const Header = styled.header`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 1.5rem;
+    padding: 2rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1280px;
     border-bottom: 1px solid #ffffff24;
     z-index: 99999;
     transition: .7s;
+
+    .header-container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &.cabecalho{
+      background-color: #FFFFFF;
+      padding: 1rem 1.5rem;
+      box-shadow: 0px 0px 3px #00000070;
+
+      .wppMenu{
+        color: #012340 !important;
+        border-color: #012340!important;
+      }
+    }    
     
     @media screen and (max-width: 768px){
-        height: 70px;
-        padding: 0 1rem;
+        padding: 1rem 0;
+
+        &.cabecalho{
+          padding: .5rem 0;
+        }
 
         .cabecalho-wpp{
             display: none;
@@ -34,11 +51,12 @@ const ContainerNav = styled.div`
     display: flex;
     align-items: center;
 
-    .abrir-menu-mobile{
-      height: 100vh;
+    @media screen and( max-width: 768px){
+      .abrir-menu-mobile{
+        height: 100vh;
+      }
     }
 `
-
 const BotaoPular = styled.a`
   position: absolute;
   font-size: 1px;
@@ -46,8 +64,9 @@ const BotaoPular = styled.a`
   color: transparent;
 `
 
-const Cabecalho = ({cor, classe, classeMenu})=> {
+const Cabecalho = ()=> {
 
+    const scrollDown = useScrollY();  
     const [abreMenu, setAbreMenu] = useState('');
 
     function abrirMenuMobile(){
@@ -55,14 +74,16 @@ const Cabecalho = ({cor, classe, classeMenu})=> {
     }
 
     return(
-      <Header className={classNames(classe)}>
-        <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
-        <Logo cor={cor} />
-        <BotaoMenu classe={classeMenu} aoClicar={abrirMenuMobile} />
-        <ContainerNav>
-            <Menu classe={classNames(abreMenu)} aoClicarLink={abrirMenuMobile} />
-            <Botao classe='cabecalho-wpp' href='https://wa.me/5521991537608'> WhatsApp </Botao>
-        </ContainerNav>
+      <Header className={ scrollDown ? 'cabecalho' : ''}>
+        <Container className="header-container">
+          <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
+          <Logo />
+          <BotaoMenu />
+          <ContainerNav>
+              <Menu/>
+              <Botao classe={['cabecalho-wpp','wppMenu']} href='https://wa.me/5521991537608'> WhatsApp </Botao>
+          </ContainerNav>
+        </Container>
       </Header>
     )
 }

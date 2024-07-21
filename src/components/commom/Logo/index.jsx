@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useScrollY } from "../../../Hooks/useScrollY";
 
 const Div = styled.div`
     width: 100%;
@@ -10,9 +11,14 @@ const Div = styled.div`
 `
 
 const Logo = ( {cor} )=>{
+
+    const scrollDown = useScrollY();
+
+    const logo = scrollDown ? 'preta' : 'branca'
+
     return(
         <Div>
-            <img src={`./imagens/logo-${cor}.png`} />
+            <img src={`./imagens/logo-${logo}.png`} />
         </Div>
     )
 }

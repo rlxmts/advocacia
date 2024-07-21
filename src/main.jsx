@@ -6,6 +6,6 @@ import { EstiloGlobal } from './assets/EstiloGlobal/index.jsx';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <EstiloGlobal />
-    <App />
+      <App />
   </React.StrictMode>,
 )

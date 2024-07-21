@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useScrollY } from "../../../../Hooks/useScrollY";
 
 const Item = styled.li`
 
@@ -16,6 +17,10 @@ const Item = styled.li`
 
         &:hover {
             opacity: .7;
+        }
+
+        &.linkScroll{
+            color: #012340;
         }
     }
 
@@ -51,10 +56,19 @@ const linksMenu = [
 
 const ItensMenu = ({aoClicar})=> {
 
+    const scrollDown = useScrollY();
+    const menuScroll = scrollDown ? 'linkScroll' : '';
+
     return(
         linksMenu.map( item => 
             <Item key={item.link}>
-                <a onClick={aoClicar} href={item.link}>{item.nome}</a>
+                <a 
+                    className={menuScroll}
+                    onClick={aoClicar} 
+                    href={item.link}
+                >
+                    {item.nome}
+                </a>
             </Item>
         )  
     )

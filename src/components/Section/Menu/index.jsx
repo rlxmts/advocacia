@@ -29,7 +29,7 @@ const Menu = ({classe, aoClicarLink})=> {
     return(
         <Nav>
             <ul className={classe}>
-                <ItensMenu aoClicar={aoClicarLink} />
+                <ItensMenu />
             </ul>
         </Nav>
     )

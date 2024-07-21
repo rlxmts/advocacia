@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import styled from "styled-components";
 
 const BotaoEstilizado = styled.a`
@@ -21,7 +22,7 @@ const Botao = ({ children, branco=true, href, classe })=> {
     
     return(
         <BotaoEstilizado 
-            className={classe}
+            className={classNames(classe)}
             href={href} 
             style={ { color: corLink, border:`1px solid ${corLink}` } }
             target="_blank"
