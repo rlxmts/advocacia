@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Container } from "../../commom/Container";
-import Logo from "../../commom/Logo";
 import LinksRapidos from "./LinksRapidos";
 import RedesSociais from "./RedesSociais";
 
@@ -13,6 +12,10 @@ const Footer = styled.footer`
         width: 100%;
         border-bottom: 1px solid #f2f2f2;
         padding-bottom: 1rem;
+
+        img{
+            max-width: 130px;
+        }
     }
 
     .caixa-listas{
@@ -45,7 +48,7 @@ const Rodape = () => {
         <Footer>
             <Container>
                 <div className="caixa-logo">
-                    <Logo cor='branca' />
+                    <img src="./imagens/logo-branca.png" />
                 </div>
                 <div className="caixa-listas">
                     <LinksRapidos />

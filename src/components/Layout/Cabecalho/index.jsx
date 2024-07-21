@@ -3,7 +3,6 @@ import Menu from "../../Section/Menu";
 import Botao from "../../commom/Botao";
 import Logo from "../../commom/Logo";
 import BotaoMenu from "../../commom/BotaoMenu";
-import { useState } from "react";
 import { useScrollY } from "../../../Hooks/useScrollY";
 import { Container } from "../../commom/Container";
 
@@ -65,14 +64,7 @@ const BotaoPular = styled.a`
 `
 
 const Cabecalho = ()=> {
-
     const scrollDown = useScrollY();  
-    const [abreMenu, setAbreMenu] = useState('');
-
-    function abrirMenuMobile(){
-      abreMenu === '' ? setAbreMenu('abrir-menu-mobile') : setAbreMenu('');
-    }
-
     return(
       <Header className={ scrollDown ? 'cabecalho' : ''}>
         <Container className="header-container">
@@ -87,5 +79,4 @@ const Cabecalho = ()=> {
       </Header>
     )
 }
-
 export default Cabecalho;
