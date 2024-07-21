@@ -17,17 +17,21 @@ const Item = styled.li`
 
         &:hover {
             opacity: .7;
-        }
+        }        
+    }
 
-        &.linkScroll{
-            color: #012340;
-        }
+    .linkScroll{
+        color: #012340;
     }
 
     @media screen and (max-width: 768px){
         a{
             font-size: 1.7rem;
             letter-spacing: 2px;
+        }
+
+        .linkScroll{
+            color: #FFF ;
         }
     }
 `

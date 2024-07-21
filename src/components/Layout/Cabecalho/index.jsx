@@ -35,10 +35,13 @@ const Header = styled.header`
     }    
     
     @media screen and (max-width: 768px){
+        height: 70px;
         padding: 1rem 0;
+        display: flex;
+        align-items: center;
 
         &.cabecalho{
-          padding: .5rem 0;
+          padding: 0;
         }
 
         .cabecalho-wpp{
@@ -49,12 +52,6 @@ const Header = styled.header`
 const ContainerNav = styled.div`
     display: flex;
     align-items: center;
-
-    @media screen and( max-width: 768px){
-      .abrir-menu-mobile{
-        height: 100vh;
-      }
-    }
 `
 const BotaoPular = styled.a`
   position: absolute;

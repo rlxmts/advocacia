@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import ItensMenu from "./ItensMenu";
+import { useContext } from "react";
+import { MenuMobileContext } from "../../../context/MenuMobileContext";
 
 const Nav = styled.nav`
     width: 100%;
@@ -25,14 +27,17 @@ const Nav = styled.nav`
         }
 
         .menu-visivel{
-            height: 100%;
+            height: calc(100vh - 70px);
         }
     }
 `
 const Menu = ({classe})=> {
+
+    const {menuVisible} = useContext(MenuMobileContext);
+
     return(
         <Nav>
-            <ul className={classe}>
+            <ul className={menuVisible ? 'menu-visivel' : ''}>
                 <ItensMenu />
             </ul>
         </Nav>
