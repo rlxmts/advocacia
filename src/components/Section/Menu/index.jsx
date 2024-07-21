@@ -27,14 +27,12 @@ const Nav = styled.nav`
         }
 
         .menu-visivel{
-            height: calc(100svh - 70px);
+            height: calc(100vh - 70px);
         }
     }
 `
-const Menu = ({classe})=> {
-
+const Menu = ()=> {
     const {menuVisible} = useContext(MenuMobileContext);
-
     return(
         <Nav>
             <ul className={menuVisible ? 'menu-visivel' : ''}>
