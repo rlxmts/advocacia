@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { useEffect, useState } from "react";
 
 const surgeTexto = keyframes`
     0%{opacity:0; transform: translateY(30px);}
@@ -12,10 +13,15 @@ const Popup = styled.div`
     width: 90%;
     max-width: 300px;
     right: 10px;
-    bottom: 70px;
+    bottom: -100%;
     box-shadow: 0px 0px 10px #00000070;
     z-index: 99;
     border-radius: 10px;
+    transition: 1s;
+
+    &.popup-ativo {
+       bottom: 70px;
+    }
 
     .bt-fechar{
         position: relative;
@@ -130,11 +136,28 @@ const BotaoWppFlutuante = styled.a`
 `
 
 const BotaoWpp = ()=> {
+    
+    const [ativaPopup, setAtivaPopup] = useState(false);
+    
+    useEffect( ()=> {
+        const sobePopup = () =>{
+            setAtivaPopup(!ativaPopup);
+        }
+        setTimeout(sobePopup, 5000);
+
+        return () => clearTimeout(sobePopup);
+    }, [])
+
     return(
         <>
-            <Popup>
+            <Popup className={ativaPopup ? 'popup-ativo' : ''}>
                 <div className="bt-fechar">
-                    <IoMdCloseCircleOutline className="icone" size={20} fill="#6b9e98" />
+                    <IoMdCloseCircleOutline 
+                        onClick={()=> setAtivaPopup(false)}
+                        className="icone" 
+                        size={20} 
+                        fill="#6b9e98" 
+                    />
                 </div>
                 <div className="popup-cabecalho">
                     <div className="avatar">
@@ -163,7 +186,7 @@ const BotaoWpp = ()=> {
                     </a>
                 </div>
             </Popup>
-            <BotaoWppFlutuante 
+            <BotaoWppFlutuante                 
                 href="https://wa.me/5521991537608"
                 rel="noreferrer noopener"
                 target="_blank"
