@@ -27,7 +27,7 @@ const Nav = styled.nav`
         }
 
         .menu-visivel{
-            height: calc(100vh - 70px);
+            height: calc(100svh - 70px);
         }
     }
 `
