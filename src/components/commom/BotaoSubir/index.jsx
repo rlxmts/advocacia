@@ -46,8 +46,15 @@ const BotaoSubir = () => {
 
     }, [])
 
+    const subirAoTopo = ()=> {
+        window.scrollTo(0,0);
+    }
+
     return(
-        <BotaoScrollTop className={scrollTop ? 'mostra-bt' : ''}>
+        <BotaoScrollTop 
+            className={scrollTop ? 'mostra-bt' : ''}
+            onClick={subirAoTopo}
+        >
             <div>
                 <MdOutlineArrowDropUp fill="#FFFFFF" size={20} />
             </div>
