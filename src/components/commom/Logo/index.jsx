@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { useScrollY } from "../../../Hooks/useScrollY";
+import { useContext } from "react";
+import { MenuMobileContext } from "../../../context/MenuMobileContext";
 
 const Div = styled.div`
     width: 100%;
@@ -18,7 +20,8 @@ const Div = styled.div`
 
 const Logo = ()=>{
     const scrollDown = useScrollY();
-    const logo = scrollDown ? 'preta' : 'branca'
+    const {menuVisible} = useContext(MenuMobileContext);
+    const logo = scrollDown || menuVisible ? 'preta' : 'branca'
     return(
         <Div>
             <img src={`./imagens/logo-${logo}.png`} />

@@ -65,18 +65,16 @@ const Button = styled.div`
     }
     `
 
-const BotaoMenu = ({classe}) => {    
+const BotaoMenu = () => {    
 
-    const scrollDown = useScrollY();
-    const spanscroll = scrollDown ? 'troca-cor' : '';
-    
     const {menuVisible, menuToggle} = useContext(MenuMobileContext);
-
+    const scrollDown = useScrollY();
+    const spanscroll = scrollDown || menuVisible ? 'troca-cor' : '';
     const animaBt = menuVisible ? 'anima-bt' : '';
 
     return(
         <Button onClick={menuToggle}>
-            <span className={classNames(classe, spanscroll, animaBt)}></span>
+            <span className={classNames(spanscroll, animaBt)}></span>
         </Button>
     )
 }

@@ -5,6 +5,8 @@ import Logo from "../../commom/Logo";
 import BotaoMenu from "../../commom/BotaoMenu";
 import { useScrollY } from "../../../Hooks/useScrollY";
 import { Container } from "../../commom/Container";
+import { useContext } from "react";
+import { MenuMobileContext } from "../../../context/MenuMobileContext";
 
 const Header = styled.header`
     padding: 2rem 0;
@@ -61,9 +63,14 @@ const BotaoPular = styled.a`
 `
 
 const Cabecalho = ()=> {
+
+    const {menuVisible} = useContext(MenuMobileContext);
     const scrollDown = useScrollY();  
+
+    const menuBranco = menuVisible || scrollDown ? 'cabecalho' : '';
+
     return(
-      <Header className={ scrollDown ? 'cabecalho' : ''}>
+      <Header className={menuBranco}>
         <Container className="header-container">
           <BotaoPular href="#conteudo-principal">Pular Navegacão</BotaoPular>
           <Logo />
