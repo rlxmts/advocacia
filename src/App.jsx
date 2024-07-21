@@ -7,6 +7,7 @@ import Atuacao from "./components/Section/Atuacao"
 import Contato from "./components/Section/Contato"
 import Rodape from "./components/Layout/Rodape"
 import BotaoWpp from "./components/commom/BotaoWpp"
+import BotaoSubir from "./components/commom/BotaoSubir"
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
       <SecaoLogo />
       <Contato />
     </main>
-    <BotaoWpp />
     <Rodape />
+    <BotaoWpp />
+    <BotaoSubir />
     </>
   )
 }

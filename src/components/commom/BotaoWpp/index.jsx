@@ -120,7 +120,7 @@ const Popup = styled.div`
 `
 const BotaoWppFlutuante = styled.a`
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     background-color: #095E54 ;
     display: block;
     height: 50px;
