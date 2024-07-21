@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+import { IoMdCloseCircleOutline } from "react-icons/io";
 
 const surgeTexto = keyframes`
     0%{opacity:0; transform: translateY(30px);}
@@ -7,15 +8,25 @@ const surgeTexto = keyframes`
 `
 
 const Popup = styled.div`
-
     position: fixed;
     width: 90%;
     max-width: 300px;
     right: 10px;
-    bottom: 80px;
+    bottom: 70px;
     box-shadow: 0px 0px 10px #00000070;
     z-index: 99;
     border-radius: 10px;
+
+    .bt-fechar{
+        position: relative;
+
+        .icone{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+        }
+    }
 
     .popup-cabecalho{
         background-color: #095e54;
@@ -101,37 +112,64 @@ const Popup = styled.div`
         }
     }
 `
+const BotaoWppFlutuante = styled.a`
+    position: fixed;
+    z-index: 1;
+    background-color: #095E54 ;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    right: 10px;
+    bottom: 10px;
+    box-shadow: 0px 0px 10px #00000070;
+    background-image: url('./imagens/wpp.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+`
 
 const BotaoWpp = ()=> {
     return(
-        <Popup>
-            <div className="popup-cabecalho">
-                <div className="avatar">
-                    <img src="./favicon.png" />
+        <>
+            <Popup>
+                <div className="bt-fechar">
+                    <IoMdCloseCircleOutline className="icone" size={20} fill="#6b9e98" />
                 </div>
-                <div className="popup-perfil">
-                    <h5>Horbiti Advogados</h5>
-                    <span>Atendimento digital</span>
+                <div className="popup-cabecalho">
+                    <div className="avatar">
+                        <img src="./favicon.png" />
+                    </div>
+                    <div className="popup-perfil">
+                        <h5>Horbiti Advogados</h5>
+                        <span>Atendimento digital</span>
+                    </div>
                 </div>
-            </div>
-            <div className="popup-body">
-                <div className="body-textos">
-                    <h5>Horbiti Advogados</h5>
-                    <span>
-                        Olá! <br></br> Como podemos te ajudar?
-                    </span>
+                <div className="popup-body">
+                    <div className="body-textos">
+                        <h5>Horbiti Advogados</h5>
+                        <span>
+                            Olá! <br></br> Como podemos te ajudar?
+                        </span>
+                    </div>
                 </div>
-            </div>
-            <div className="popup-botao">
-                <a
-                    href="https://wa.me/5521991537608"
-                    rel="nooponer noreferrer"
-                    target="_blank"
-                >
-                    WhatsApp
-                </a>
-            </div>
-        </Popup>
+                <div className="popup-botao">
+                    <a
+                        href="https://wa.me/5521991537608"
+                        rel="nooponer noreferrer"
+                        target="_blank"
+                    >
+                        WhatsApp
+                    </a>
+                </div>
+            </Popup>
+            <BotaoWppFlutuante 
+                href="https://wa.me/5521991537608"
+                rel="noreferrer noopener"
+                target="_blank"
+            >
+            </BotaoWppFlutuante>
+        </>
     )   
 }
 
