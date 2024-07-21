@@ -31,11 +31,11 @@ const Button = styled.div`
         }
         
         &::before{
-            bottom: 4px;
+            bottom: 5px;
         }
         
         &::after{
-            top: 4px;
+            top: 5px;
         }
         
     }
@@ -48,7 +48,7 @@ const Button = styled.div`
         }
 
         &::after{
-            transform: translateY(-4px) rotate(-90deg);
+            transform: translateY(-5px) rotate(-90deg);
         }
     }
     
