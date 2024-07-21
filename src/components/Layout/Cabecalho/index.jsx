@@ -66,8 +66,7 @@ const Cabecalho = ()=> {
 
     const {menuVisible} = useContext(MenuMobileContext);
     const scrollDown = useScrollY();  
-
-    const menuBranco = menuVisible || scrollDown ? 'cabecalho' : '';
+    const menuBranco = scrollDown || menuVisible ? 'cabecalho' : '';
 
     return(
       <Header className={menuBranco}>

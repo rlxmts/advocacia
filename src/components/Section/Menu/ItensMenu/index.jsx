@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useScrollY } from "../../../../Hooks/useScrollY";
 import { useContext } from "react";
 import { MenuMobileContext } from "../../../../context/MenuMobileContext";
+import { usePageWidth } from "../../../../Hooks/usePageWidth";
 
 const Item = styled.li`
 
@@ -39,10 +40,6 @@ const Item = styled.li`
 `
 const linksMenu = [
     {
-        nome: 'Home',
-        link: '#inicio'
-    },
-    {
         nome: 'Sobre Nós',
         link: '#sobre'
     },
@@ -64,19 +61,26 @@ const ItensMenu = ()=> {
     const scrollDown = useScrollY();
     const menuScroll = scrollDown ? 'linkScroll' : '';
     const {menuToggle} = useContext(MenuMobileContext);
+    const widthPage = usePageWidth();
+
+    const checkWidth= () =>{
+        if(widthPage <= 768){
+            menuToggle();
+        }
+    }
+
     return(
         linksMenu.map( item => 
             <Item key={item.link}>
                 <a 
                     className={menuScroll}
-                    onClick={menuToggle} 
+                    onClick={ checkWidth } 
                     href={item.link}
                 >
                     {item.nome}
                 </a>
             </Item>
-        )  
+        )
     )
 }
-
 export default ItensMenu;
