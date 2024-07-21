@@ -23,9 +23,13 @@ const Nav = styled.nav`
             overflow: hidden;
             height: 0;
         }
+
+        .menu-visivel{
+            height: 100%;
+        }
     }
 `
-const Menu = ({classe, aoClicarLink})=> {
+const Menu = ({classe})=> {
     return(
         <Nav>
             <ul className={classe}>
@@ -34,5 +38,4 @@ const Menu = ({classe, aoClicarLink})=> {
         </Nav>
     )
 }
-
 export default Menu;

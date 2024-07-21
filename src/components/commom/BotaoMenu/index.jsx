@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useScrollY } from "../../../Hooks/useScrollY";
 import classNames from "classnames";
+import { useContext } from "react";
+import { MenuMobileContext } from "../../../context/MenuMobileContext";
 
 const Button = styled.div`
     display: none !important;
@@ -50,17 +52,17 @@ const Button = styled.div`
     }
     `
 
-const BotaoMenu = ({classe, aoClicar}) => {
-    
-    const scrollDown = useScrollY();
+const BotaoMenu = ({classe}) => {    
 
+    const scrollDown = useScrollY();
     const spanscroll = scrollDown ? 'troca-cor' : '';
+    
+    const {menuToggle} = useContext(MenuMobileContext);
 
     return(
-        <Button onClick={aoClicar}>
+        <Button onClick={menuToggle}>
             <span className={classNames(classe, spanscroll)}></span>
         </Button>
     )
 }
-
 export default BotaoMenu;

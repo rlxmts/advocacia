@@ -16,17 +16,13 @@ const Div = styled.div`
     }
 `
 
-const Logo = ( {cor} )=>{
-
+const Logo = ()=>{
     const scrollDown = useScrollY();
-
     const logo = scrollDown ? 'preta' : 'branca'
-
     return(
         <Div>
             <img src={`./imagens/logo-${logo}.png`} />
         </Div>
     )
 }
-
 export default Logo;
