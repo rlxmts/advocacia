@@ -8,6 +8,12 @@ const Div = styled.div`
         width: 100%;
         max-width: 150px;
     }
+
+    @media screen and (max-width: 686px){
+        img{
+            max-width: 100px;
+        }
+    }
 `
 
 const Logo = ( {cor} )=>{

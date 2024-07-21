@@ -11,13 +11,15 @@ function App() {
   return (
     <>
     <Cabecalho />
-    <Banner />
-    <Sobre />
-    <SecaoLogo />
-    <Segmentos />
-    <Atuacao />
-    <SecaoLogo />
-    <Contato />
+    <main role="main">
+      <Banner />
+      <Sobre />
+      <SecaoLogo />
+      <Segmentos />
+      <Atuacao />
+      <SecaoLogo />
+      <Contato />
+    </main>
     <Rodape />
     </>
   )

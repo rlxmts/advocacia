@@ -48,7 +48,7 @@ const Rodape = () => {
         <Footer>
             <Container>
                 <div className="caixa-logo">
-                    <img src="./imagens/logo-branca.png" />
+                    <img src="./imagens/logo-branca.png" alt="Logotipo Horbiti Advogados"/>
                 </div>
                 <div className="caixa-listas">
                     <LinksRapidos />
