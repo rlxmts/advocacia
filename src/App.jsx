@@ -1,15 +1,28 @@
-import Cabecalho from "./components/Layout/Cabecalho"
-import Segmentos from "./components/Section/Segmentos"
-import Sobre from "./components/Section/Sobre"
-import Banner from "./components/Section/Banner"
-import SecaoLogo from "./components/Section/SecaoLogo"
-import Atuacao from "./components/Section/Atuacao"
-import Contato from "./components/Section/Contato"
-import Rodape from "./components/Layout/Rodape"
-import BotaoWpp from "./components/commom/BotaoWpp"
-import BotaoSubir from "./components/commom/BotaoSubir"
+import Cabecalho from "./components/Layout/Cabecalho";
+import Segmentos from "./components/Section/Segmentos";
+import Sobre from "./components/Section/Sobre";
+import Banner from "./components/Section/Banner";
+import SecaoLogo from "./components/Section/SecaoLogo";
+import Atuacao from "./components/Section/Atuacao";
+import Contato from "./components/Section/Contato";
+import Rodape from "./components/Layout/Rodape";
+import BotaoWpp from "./components/commom/BotaoWpp";
+import BotaoSubir from "./components/commom/BotaoSubir";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 function App() {
+
+  useEffect( ()=> {
+
+    Aos.init({
+      duration: 1000,
+      once: true
+    });
+
+  },[]);
+  
   return (
     <>
     <Cabecalho />

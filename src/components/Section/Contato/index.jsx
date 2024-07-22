@@ -49,14 +49,14 @@ const Contato = ()=>{
         <SecaoContato id="contato"> 
             <Container className="container-contato">
                 <div className="contato-textos">
-                    <Subtitulo>Contato</Subtitulo>
-                    <TituloMaior>Deseja ser atendido por nós?</TituloMaior>
-                    <Paragrafo>A Horbiti e seus advogados associados colocam sua expertise à disposição da sua empresa. Entre em contato.</Paragrafo>
+                    <Subtitulo data-aos="fade-up">Contato</Subtitulo>
+                    <TituloMaior data-aos="fade-up">Deseja ser atendido por nós?</TituloMaior>
+                    <Paragrafo data-aos="fade-up">A Horbiti e seus advogados associados colocam sua expertise à disposição da sua empresa. Entre em contato.</Paragrafo>
                 </div>
                 <Formulario />
                 <Informacoes>
-                    <Paragrafo>Av. Bem vindo de Morais, 1122 - Sala 554 - Barra Plaza - Rio de Janeiro</Paragrafo>
-                    <span>(21) 99153-7608</span>
+                    <Paragrafo data-aos="fade-up">Av. Bem vindo de Morais, 1122 - Sala 554 - Barra Plaza - Rio de Janeiro</Paragrafo>
+                    <span data-aos="fade-up">(21) 99153-7608</span>
                 </Informacoes>
             </Container>
         </SecaoContato>

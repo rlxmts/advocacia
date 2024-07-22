@@ -35,19 +35,19 @@ const Form = styled.form`
 const Formulario = () => {
     return(
         <Form>
-            <div> 
+            <div data-aos="fade-up"> 
                 <label>Nome</label>
                 <input type="text" placeholder="Nome" required/>
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <label htmlFor="tel">Telefone</label>
                 <input id="tel" type="tel" placeholder="Nome" required/>
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <label htmlFor="email">E-mail</label>
                 <input id="email" type="email" placeholder="E-mail" />
             </div>
-            <div>
+            <div data-aos="fade-up">
                 <label>Mensagem</label>
                 <textarea rows={4} placeholder="Escrava sua mensagem aqui..."/>
             </div>

@@ -41,15 +41,15 @@ const Atuacao = () =>{
     return(
         <SecaoAtuacao id="atuacao">
             <Container className="atuacao-container">
-                <Subtitulo>Atuação</Subtitulo>
-                <TituloMaior>Assessoria jurídica multidisciplinar</TituloMaior>
+                <Subtitulo data-aos="fade-up">Atuação</Subtitulo>
+                <TituloMaior data-aos="fade-up">Assessoria jurídica multidisciplinar</TituloMaior>
                 <div className="paragrafos">
-                    <Paragrafo>Atendemos nossos clientes em todas as áreas do direito essenciais para o bom funcionamento da empresa: cível, contratual, trabalhista, tributário e societário.</Paragrafo>
-                    <Paragrafo>Também é possível contar com a Horbiti Advogados nas áreas do direito de família e sucessões, penal empresarial e previdenciário.</Paragrafo>
+                    <Paragrafo data-aos="fade-up">Atendemos nossos clientes em todas as áreas do direito essenciais para o bom funcionamento da empresa: cível, contratual, trabalhista, tributário e societário.</Paragrafo>
+                    <Paragrafo data-aos="fade-up">Também é possível contar com a Horbiti Advogados nas áreas do direito de família e sucessões, penal empresarial e previdenciário.</Paragrafo>
                 </div>
                 <ListaDeAreas />
             </Container>
-            <TituloMaior className="atuacao-titulo">Vamos Trabalhar Juntos?</TituloMaior>
+            <TituloMaior className="atuacao-titulo" data-aos="fade-up">Vamos Trabalhar Juntos?</TituloMaior>
             <Botao branco={false}> Fale com a gente</Botao>
         </SecaoAtuacao>
     )

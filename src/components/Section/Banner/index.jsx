@@ -22,7 +22,7 @@ const Banner = () => {
     return(
         <SecaoBanner id="inicio">
             <h1 id="conteudo-principal">Horbiti - Advogados</h1>
-            <Titulo>Do ponto de vista jurídico e pela ótica econômica, <br></br>
+            <Titulo  data-aos="fade-down">Do ponto de vista jurídico e pela ótica econômica, <br></br>
             entendemos o seu negócio e as suas<br></br>
             particularidades.
             </Titulo>

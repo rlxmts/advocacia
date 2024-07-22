@@ -41,7 +41,7 @@ const FundoLogo = styled.div`
 const SecaoLogo = () => {
     return(
         <FundoLogo>
-            <img src="./imagens/logo-branca.png" />
+            <img src="./imagens/logo-branca.png" alt="logotipo Horbiti Advogados"  data-aos="fade-up" />
         </FundoLogo>
     )
 }

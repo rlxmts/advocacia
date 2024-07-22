@@ -83,12 +83,12 @@ const Segmentos = () => {
         <SectionSegmentos id="segmentos">
             <Container>
                 <DivTextos>
-                    <Paragrafo>
+                    <Paragrafo data-aos="fade-up">
                     Independente do segmento, o objetivo da Horbiti Advogados é facilitar e potencializar os negócios e o funcionamento empresarial dos clientes, trazendo segurança aos projetos, operações e decisões em meio à instabilidade do mercado e riscos inerentes à atividade.
                     </Paragrafo>
                     <div>
-                        <Subtitulo>Segmentos</Subtitulo>
-                        <TituloMaior>Quem são nossos clientes</TituloMaior>
+                        <Subtitulo data-aos="fade-up">Segmentos</Subtitulo>
+                        <TituloMaior data-aos="fade-up">Quem são nossos clientes</TituloMaior>
                     </div>
                 </DivTextos>
                 <CardsContainer>

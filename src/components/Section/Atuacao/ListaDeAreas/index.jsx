@@ -112,7 +112,12 @@ const ListaDeAreas = () =>{
         <ListaDeCards>
             {areasDeAtuacao.map( item => {
                 return(
-                    <ItemDeAtuacao key={item.nome} onClick={(e) => ativaLeitura(e.target)}>
+                    <ItemDeAtuacao
+                        key={item.nome} 
+                        onClick={(e) => 
+                        ativaLeitura(e.target)}
+                        data-aos="fade-up"
+                    >
                         <h5>{item.nome}</h5>
                         <div  className='item-texto'>
                             <p>{item.texto}</p>                    

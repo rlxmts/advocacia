@@ -52,12 +52,11 @@ const Apresentacao = () => {
         <SecaoSobre>
             <Container className="sobre-container">
                 <ApresentacaoElement>
-                    <div className="aprentacao-textos">
-                        <h4>INOVAÇÃO & ENVOLVIMENTO</h4>
-                        <p>Em um fluxo cada vez maior de informações, é preciso discernir o que é útil e, de forma colaborativa, identificar as melhores oportunidades.</p>
+                    <div data-aos="fade-up" className="aprentacao-textos">
+                        <h4 data-aos="fade-up">INOVAÇÃO & ENVOLVIMENTO</h4>
+                        <p data-aos="fade-up">Em um fluxo cada vez maior de informações, é preciso discernir o que é útil e, de forma colaborativa, identificar as melhores oportunidades.</p>
                         <Botao href='https://wa.me/5521991537608'>Vamos Conversar?</Botao>
                     </div>
-                    <div className="caixa-vazia"></div>
                 </ApresentacaoElement>
             </Container>
         </SecaoSobre>    
