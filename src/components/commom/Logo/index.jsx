@@ -24,7 +24,7 @@ const Logo = ()=>{
     const logo = scrollDown || menuVisible ? 'preta' : 'branca'
     return(
         <Div>
-            <img src={`./imagens/logo-${logo}.png`} />
+            <img src={`./imagens/logo-${logo}.png`} alt="Logo Horbiti Advogados"/>
         </Div>
     )
 }

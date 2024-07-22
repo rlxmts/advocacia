@@ -176,7 +176,7 @@ const BotaoWpp = ()=> {
                 </div>
                 <div className="popup-cabecalho">
                     <div className="avatar">
-                        <img src="./favicon.png" />
+                        <img src="./favicon.png" alt="imagem perfil horbiti" />
                     </div>
                     <div className="popup-perfil">
                         <h5>Horbiti Advogados</h5>
