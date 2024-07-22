@@ -50,7 +50,7 @@ const Atuacao = () =>{
                 <ListaDeAreas />
             </Container>
             <TituloMaior className="atuacao-titulo" data-aos="fade-up">Vamos Trabalhar Juntos?</TituloMaior>
-            <Botao branco={false}> Fale com a gente</Botao>
+            <Botao branco={false} href='https://wa.me/5521991537608'> Fale com a gente</Botao>
         </SecaoAtuacao>
     )
 }

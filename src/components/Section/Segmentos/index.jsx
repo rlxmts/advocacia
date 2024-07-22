@@ -97,7 +97,10 @@ const Segmentos = () => {
                     })}
                 </CardsContainer>
             </Container>
-            <Botao branco={false}>Vamos Conversar?</Botao>
+            <Botao 
+                branco={false} 
+                href='https://wa.me/5521991537608'
+            >Vamos Conversar?</Botao>
         </SectionSegmentos>
     )
 }

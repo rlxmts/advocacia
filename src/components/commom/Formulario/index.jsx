@@ -51,7 +51,7 @@ const Formulario = () => {
                 <label>Mensagem</label>
                 <textarea rows={4} placeholder="Escrava sua mensagem aqui..."/>
             </div>
-            <Botao branco={false}>Enviar</Botao>
+            <Botao branco={false} href='https://wa.me/5521991537608'>Enviar</Botao>
         </Form>
     )
 }

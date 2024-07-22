@@ -89,6 +89,21 @@ const Popup = styled.div`
             border-radius: 0 10px 10px 10px;
             background-color: #FFFFFF;
             padding: 1rem;
+            position: relative;
+
+            &::before{
+                content:'';
+                display: block;
+                width: 0px;
+                height: 0px;
+                border-right: 15px solid #FFFFFF;
+                border-bottom: 15px solid transparent;
+                border-top: 15px solid transparent;
+                transform: rotate(270deg);
+                position: absolute;
+                left: -2px;
+                top: -7px;
+            }
 
             h5{
                 font-family: "RobotoMedium";
